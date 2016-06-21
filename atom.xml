@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[lucs blog]]></title>
+  <link href="http://lcus.github.io/atom.xml" rel="self"/>
+  <link href="http://lcus.github.io/"/>
+  <updated>2016-06-21T13:43:02+08:00</updated>
+  <id>http://lcus.github.io/</id>
+  <author>
+    <name><![CDATA[lcus]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test]]></title>
+    <link href="http://lcus.github.io/blog/2016/06/21/test/"/>
+    <updated>2016-06-21T13:31:20+08:00</updated>
+    <id>http://lcus.github.io/blog/2016/06/21/test</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

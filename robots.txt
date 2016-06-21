@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://lcus.github.io/sitemap.xml 
