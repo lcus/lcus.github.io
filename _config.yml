@@ -4,7 +4,7 @@
 
 url: http://lcus.github.io
 title: lucs blog
-subtitle: 记录ios里的一点一滴，慢慢来我还年起!
+subtitle: 记录iOS里的一点一滴，慢慢来我还年起!
 author: lcus
 simple_search: https://www.google.com/search
 description:
@@ -33,7 +33,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - autolink

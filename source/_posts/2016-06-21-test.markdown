@@ -1,7 +1,89 @@
 ---
 layout: post
-title: "Test"
+title: "总结Octopress+ Github Pages基本搭建"
 date: 2016-06-21 13:31:20 +0800
 comments: true
-categories: 
+categories: Mac Octopress 坑 githubpages
 ---
+
+>断断续续的终于搭建完了 记录一下安装过程和遇到的坑
+
+###安装环境
+
+* Mac自带git 可以升级下 省略git
+* Ruby环境的[安装](https://github.com/ruby-china/ruby-china/wiki/Mac-OS-X-%E4%B8%8A%E5%AE%89%E8%A3%85-Ruby)
+
+###安装Octopress
+
+* 打开终端(Terminal)执行以下命令
+
+```cpp
+	git clone git://github.com/imathis/octopress.git octopress
+	cd octopress
+```
+上边的代码是把 Octopress 克隆到本地磁盘，进入octopress文件夹
+
+* 安装Octopress 所必需的依赖项执行以下命令
+```cpp
+gem install bundler
+bundle install #!!打开Gemfile把source 替换成source "https://rubygems.org"
+```
+* 安装默认主题
+```cpp
+rake install
+```
+###配置 Octopress
+* 打开目录下的`_config.yml`文件 修改其中的`title`,`subtitle`,`author`字段
+```cpp
+title:博客名字
+subtitle:类似签名
+author:作者名字
+```
+###写博客的方法
+```cpp
+rake new_post["title"] # 在 source/_posts 目录下创建一篇新博文 打开.markdown文件进行博文编辑
+rake generate          # 生成博文到 public 目录下
+rake watch             # 查看 source 和 sass 目录的变化，且有变化时重新生成博文
+rake preview           # 在 http://localhost:4000/ 预览博文
+```
+
+###Octopress 部署到 Github Pages
+
+*  Github 账号登录 选择 `Create new repository` 在 `Repository name` 填写`[your_username].github.io` 务必照着这个格式填写,否则无法部署博客,创建好后会出现一个 SSH 地址，形如`git@github.com:[your_username]/[your_username].github.io.git` SSH 这个地址部署时候会用到。
+* 克隆刚创建好的`repository`到octopress 文件夹
+* 打开终端输入如下命令
+```cpp
+cd octopress
+rake setup_github_pages
+```
+输入完成后出现一个输入Url的地址把生成的ssh 地址粘进去回车
+
+* 生成页面和部署执行以下命令
+```cpp
+rake generate
+rake deploy
+```
+第一个命令用于生成页面 第二个页面用于部署
+
+* 提交博客源文件
+```cpp
+git add .
+git commit -m 'your message'
+git push origin source
+```
+自此博客的基本搭建完成了。
+
+
+###参考
+1.[使用 Octopress+GitHub Pages 搭建个人博客](http://blog.leichunfeng.com/blog/2014/11/11/use-octopress-plus-github-pages-to-setup-a-personal-blog/)
+
+2.[Mac OS X 上安装 Ruby](https://github.com/ruby-china/ruby-china/wiki/Mac-OS-X-%E4%B8%8A%E5%AE%89%E8%A3%85-Ruby)
+
+
+
+
+
+
+
+
+
