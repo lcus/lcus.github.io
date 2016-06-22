@@ -4,7 +4,7 @@
   <title><![CDATA[lucs blog]]></title>
   <link href="http://lcus.github.io/atom.xml" rel="self"/>
   <link href="http://lcus.github.io/"/>
-  <updated>2016-06-22T11:22:08+08:00</updated>
+  <updated>2016-06-22T12:50:00+08:00</updated>
   <id>http://lcus.github.io/</id>
   <author>
     <name><![CDATA[lcus]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[总结Octopress+ Github Pages基本搭建]]></title>
-    <link href="http://lcus.github.io/blog/2016/06/21/test/"/>
-    <updated>2016-06-21T13:31:20+08:00</updated>
-    <id>http://lcus.github.io/blog/2016/06/21/test</id>
+    <link href="http://lcus.github.io/blog/2015/06/21/test/"/>
+    <updated>2015-06-21T13:31:20+08:00</updated>
+    <id>http://lcus.github.io/blog/2015/06/21/test</id>
     <content type="html"><![CDATA[<blockquote>
   <p>断断续续的终于搭建完了 记录一下安装过程和遇到的坑</p>
 </blockquote>
@@ -56,8 +56,12 @@
 <figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class="cpp"><span class="line"><span class="n">rake</span> <span class="n">install</span>
 </span></code></pre></td></tr></table></div></figure>
-<p>###配置 Octopress
-* 打开目录下的<code>_config.yml</code>文件 修改其中的<code>title</code>,<code>subtitle</code>,<code>author</code>字段</p>
+
+<h3 id="octopress-1">配置 Octopress</h3>
+
+<ul>
+  <li>打开目录下的<code>_config.yml</code>文件 修改其中的<code>title</code>,<code>subtitle</code>,<code>author</code>字段</li>
+</ul>
 <figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
@@ -65,7 +69,9 @@
 </span><span class="line"><span class="nl">subtitle</span><span class="p">:</span><span class="err">类似签名</span>
 </span><span class="line"><span class="nl">author</span><span class="p">:</span><span class="err">作者名字</span>
 </span></code></pre></td></tr></table></div></figure>
-<p>###写博客的方法</p>
+
+<h3 id="section-1">写博客的方法</h3>
+
 <figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
@@ -112,7 +118,7 @@
 </span></code></pre></td></tr></table></div></figure>
 <p>自此博客的基本搭建完成了。</p>
 
-<h3 id="section-1">参考</h3>
+<h3 id="section-2">参考</h3>
 <p>1.<a href="http://blog.leichunfeng.com/blog/2014/11/11/use-octopress-plus-github-pages-to-setup-a-personal-blog/">使用 Octopress+GitHub Pages 搭建个人博客</a></p>
 
 <p>2.<a href="https://github.com/ruby-china/ruby-china/wiki/Mac-OS-X-%E4%B8%8A%E5%AE%89%E8%A3%85-Ruby">Mac OS X 上安装 Ruby</a></p>
