@@ -4,7 +4,7 @@
   <title><![CDATA[lucs blog]]></title>
   <link href="http://lcus.github.io/atom.xml" rel="self"/>
   <link href="http://lcus.github.io/"/>
-  <updated>2016-06-22T12:50:00+08:00</updated>
+  <updated>2016-06-22T15:58:11+08:00</updated>
   <id>http://lcus.github.io/</id>
   <author>
     <name><![CDATA[lcus]]></name>
@@ -21,6 +21,15 @@
     <content type="html"><![CDATA[<blockquote>
   <p>断断续续的终于搭建完了 记录一下安装过程和遇到的坑</p>
 </blockquote>
+
+<ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">安装环境</a></li>
+  <li><a href="#octopress" id="markdown-toc-octopress">安装Octopress</a></li>
+  <li><a href="#octopress-1" id="markdown-toc-octopress-1">配置 Octopress</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">写博客的方法</a></li>
+  <li><a href="#octopress--github-pages" id="markdown-toc-octopress--github-pages">Octopress 部署到 Github Pages</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">参考</a></li>
+</ul>
 
 <h3 id="section">安装环境</h3>
 
