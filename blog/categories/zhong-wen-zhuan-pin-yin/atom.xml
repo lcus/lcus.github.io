@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：中文转拼音 | lucs blog]]></title>
+  <link href="http://lcus.github.io/blog/categories/zhong-wen-zhuan-pin-yin/atom.xml" rel="self"/>
+  <link href="http://lcus.github.io/"/>
+  <updated>2016-06-23T11:12:19+08:00</updated>
+  <id>http://lcus.github.io/</id>
+  <author>
+    <name><![CDATA[lcus]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OC中文转换拼音]]></title>
+    <link href="http://lcus.github.io/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin/"/>
+    <updated>2015-06-23T10:51:04+08:00</updated>
+    <id>http://lcus.github.io/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin</id>
+    <content type="html"><![CDATA[<h3 id="cfstringtransform">CFStringTransform</h3>
+
+<p>CFStringTransform是 <code>Core Foundation</code>的一部分 这个类可以用来去掉重新和UInicode字符命名，还可以进行不同拼写之间转写，我介绍下中文转拼音的效果</p>
+
+<p><img src="http://images2015.cnblogs.com/blog/772619/201606/772619-20160616140155026-841665584.png" alt="" />
+更详细的可以看看参考</p>
+
+<h3 id="section">参考</h3>
+
+<p>1.<a href="http://nshipster.com/cfstringtransform/">CFString​Transform</a></p>
+]]></content>
+  </entry>
+  
+</feed>
