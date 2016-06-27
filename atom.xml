@@ -4,7 +4,7 @@
   <title><![CDATA[lucs blog]]></title>
   <link href="http://lcus.github.io/atom.xml" rel="self"/>
   <link href="http://lcus.github.io/"/>
-  <updated>2016-06-23T11:12:19+08:00</updated>
+  <updated>2016-06-27T11:39:28+08:00</updated>
   <id>http://lcus.github.io/</id>
   <author>
     <name><![CDATA[lcus]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSObject的load和initialize]]></title>
+    <link href="http://lcus.github.io/blog/2016/06/27/nsobjectde-loadhe-initialize/"/>
+    <updated>2016-06-27T11:15:16+08:00</updated>
+    <id>http://lcus.github.io/blog/2016/06/27/nsobjectde-loadhe-initialize</id>
+    <content type="html"><![CDATA[<p><code>Objective-C</code>中的基类中<code>NSObject</code>中有两个方法,<code>load</code>和<code>initialize</code>,看了很多资料 来对这两个方法做一下整理。</p>
+
+<h3 id="load">+load</h3>
+<p><strong>+load</strong> 方法是当类或者分类加载的时候调用的，实现这个方法可以让我们在类加载的时候执行一下行为，一般方法混淆（<strong>Method Swizzling</strong>）都在这里进行；如果子类没有实现<strong>+load</strong>方法 不会去调用父类的<strong>+load</strong>方法，当一个类和它的分类都实现了<strong>+load</strong>方法，这个两个方法都会被调用;</p>
+
+<h3 id="initialize">+initialize</h3>
+
+<p><strong>+initialize</strong> 方法是类或者它的子类收到第一条消息时候被调用的，<strong>+initialize</strong>方法是以一种懒加载的方式被调用的，如果始终没有一个类或者它的子类发消息，那么这个类的<strong>+initialize</strong>方法永远不会调用，这样有效的节省了资源。如果一个子类没有实现<strong>+initialize</strong>方法，它的父类的实现方法还是被调用执行，所以有时候想要保证<strong>+initialize</strong>方法执行一次 我们需要在内部判断一下类的类型。</p>
+
+<h3 id="section">验证</h3>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OC中文转换拼音]]></title>

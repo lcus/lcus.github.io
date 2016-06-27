@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>OC中文转换拼音 - lucs blog</title>
+  <title>NSObject的load和initialize - lucs blog</title>
   <meta name="author" content="lcus">
 
   
-  <meta name="description" content="CFStringTransform CFStringTransform是 Core Foundation的一部分 这个类可以用来去掉重新和UInicode字符命名，还可以进行不同拼写之间转写，我介绍下中文转拼音的效果 更详细的可以看看参考 参考 1.CFString​Transform
-">
+  <meta name="description" content="Objective-C中的基类中NSObject中有两个方法,load和initialize,看了很多资料 来对这两个方法做一下整理。 +load
++load 方法是当类或者分类加载的时候调用的，实现这个方法可以让我们在类加载的时候执行一下行为，一般方法混淆（Method Swizzling） &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lcus.github.io/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin/">
+  <link rel="canonical" href="http://lcus.github.io/blog/2016/06/27/nsobjectde-loadhe-initialize/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="lucs blog" type="application/atom+xml">
@@ -70,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">OC中文转换拼音</h1>
+      <h1 class="entry-title">NSObject的load和initialize</h1>
     
     
       <p class="meta">
@@ -79,7 +79,7 @@
 
 
 
-<time class='entry-date' datetime='2015-06-23T10:51:04+08:00'><span class='date'>2015 年6 月23 日</span> <span class='time'>10:51 am</span></time>
+<time class='entry-date' datetime='2016-06-27T11:15:16+08:00'><span class='date'>2016 年6 月27 日</span> <span class='time'>11:15 am</span></time>
         
 
            
@@ -90,16 +90,17 @@
   </header>
 
 
-<div class="entry-content"><h3 id="cfstringtransform">CFStringTransform</h3>
+<div class="entry-content"><p><code>Objective-C</code>中的基类中<code>NSObject</code>中有两个方法,<code>load</code>和<code>initialize</code>,看了很多资料 来对这两个方法做一下整理。</p>
 
-<p>CFStringTransform是 <code>Core Foundation</code>的一部分 这个类可以用来去掉重新和UInicode字符命名，还可以进行不同拼写之间转写，我介绍下中文转拼音的效果</p>
+<h3 id="load">+load</h3>
+<p><strong>+load</strong> 方法是当类或者分类加载的时候调用的，实现这个方法可以让我们在类加载的时候执行一下行为，一般方法混淆（<strong>Method Swizzling</strong>）都在这里进行；如果子类没有实现<strong>+load</strong>方法 不会去调用父类的<strong>+load</strong>方法，当一个类和它的分类都实现了<strong>+load</strong>方法，这个两个方法都会被调用;</p>
 
-<p><img src="http://images2015.cnblogs.com/blog/772619/201606/772619-20160616140155026-841665584.png" alt="" />
-更详细的可以看看参考</p>
+<h3 id="initialize">+initialize</h3>
 
-<h3 id="section">参考</h3>
+<p><strong>+initialize</strong> 方法是类或者它的子类收到第一条消息时候被调用的，<strong>+initialize</strong>方法是以一种懒加载的方式被调用的，如果始终没有一个类或者它的子类发消息，那么这个类的<strong>+initialize</strong>方法永远不会调用，这样有效的节省了资源。如果一个子类没有实现<strong>+initialize</strong>方法，它的父类的实现方法还是被调用执行，所以有时候想要保证<strong>+initialize</strong>方法执行一次 我们需要在内部判断一下类的类型。</p>
 
-<p>1.<a href="http://nshipster.com/cfstringtransform/">CFString​Transform</a></p>
+<h3 id="section">验证</h3>
+
 </div>
 
 
@@ -115,14 +116,8 @@
 
 
 
-<time class='entry-date' datetime='2015-06-23T10:51:04+08:00'><span class='date'>2015 年6 月23 日</span> <span class='time'>10:51 am</span></time>
+<time class='entry-date' datetime='2016-06-27T11:15:16+08:00'><span class='date'>2016 年6 月27 日</span> <span class='time'>11:15 am</span></time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/oc/'>oc</a>, <a class='category' href='/blog/categories/zhong-wen-zhuan-pin-yin/'>中文转拼音</a>
-  
-</span>
 
 
     </p>
@@ -136,10 +131,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/06/21/test/" title="Previous Post: 总结Octopress+ Github Pages基本搭建">&laquo; 总结Octopress+ Github Pages基本搭建</a>
+        <a class="basic-alignment left" href="/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin/" title="Previous Post: OC中文转换拼音">&laquo; OC中文转换拼音</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/06/27/nsobjectde-loadhe-initialize/" title="Next Post: NSObject的load和initialize">NSObject的load和initialize &raquo;</a>
       
     </p>
   </footer>
@@ -148,7 +141,7 @@
   <section>
     <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite"><!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin" data-title="OC中文转换拼音" data-url="http://lcus.github.io/blog/2015/06/23/oczhong-wen-zhuan-huan-pin-yin/"></div>
+	<div class="ds-thread" data-thread-key="/blog/2016/06/27/nsobjectde-loadhe-initialize" data-title="NSObject的load和initialize" data-url="http://lcus.github.io/blog/2016/06/27/nsobjectde-loadhe-initialize/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
