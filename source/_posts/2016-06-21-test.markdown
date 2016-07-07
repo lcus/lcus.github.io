@@ -3,7 +3,7 @@ layout: post
 title: "总结Octopress+ Github Pages基本搭建"
 date: 2015-06-21 13:31:20 +0800
 comments: true
-categories: Mac Octopress 坑 githubpages
+categories: Mac Octopress  githubpages
 ---
 
 >断断续续的终于搭建完了 记录一下安装过程和遇到的坑

@@ -5,7 +5,7 @@ date: 2016-06-27 11:15:16 +0800
 comments: true
 categories: 
 ---
-`Objective-C`中的基类中`NSObject`中有两个方法,`load`和`initialize`,看了很多资料 来对这两个方法做一下整理。
+`Objective-C`中的基类中`NSObject`中有两个方法`load`和`initialize`,看了很多资料 来对这两个方法做一下整理。
 
 ###+load
 **+load** 方法是当类或者分类加载的时候调用的，实现这个方法可以让我们在类加载的时候执行一下行为，一般方法混淆（**Method Swizzling**）都在这里进行；如果子类没有实现**+load**方法 不会去调用父类的**+load**方法，当一个类和它的分类都实现了**+load**方法，这个两个方法都会被调用;

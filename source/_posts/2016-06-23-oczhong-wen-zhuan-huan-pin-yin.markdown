@@ -3,7 +3,7 @@ layout: post
 title: "OC中文转换拼音"
 date: 2015-06-23 10:51:04 +0800
 comments: true
-categories: oc 中文转拼音
+categories: oc 
 ---
 ###CFStringTransform 
 
